@@ -2,7 +2,7 @@ require("dotenv").config();
 require("./passport/init_passport");
 require("./helper/init_redis");
 const express = require("express");
-const crypto = require('crypto');
+
 const morgan = require("morgan");
 const createError = require("http-errors");
 const bodyParser = require("body-parser");
@@ -11,23 +11,12 @@ const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const authRoutes = require("./routes/auth.routes");
 const apiRoutes = require("./routes/api.routes");
-const path = require('path');
+const {imgRouter,upload} = require("./gridfs_storage/init_gridfs");
 const cors = require('cors');
-const mongoose = require('mongoose');
-const  multer = require('multer');
-const GridFsStorage = require('multer-gridfs-storage');
-const grid = require('gridfs-stream');
-const { Grid } = require('gridfs-stream');
 const app = express();
 const student = require('./models/student');
 const port = process.env.Port;
-const mongouri = process.env.mongouri2;
-const conn = mongoose.createConnection(mongouri,
-    { 
-        useNewUrlParser: true, 
-        useUnifiedTopology: true  
-    }
-)
+
 
 app.use(morgan("dev"));
 app.use(cors())
@@ -53,6 +42,7 @@ app.use(passport.session());
 
 app.use("/auth", authRoutes);
 app.use("/api", apiRoutes);
+app.use("/image", imgRouter);
 
 app.get("/", async (req, res, next) => {
   try {
@@ -62,77 +52,29 @@ app.get("/", async (req, res, next) => {
   }
 });
 
-
-
-
-////////////////////////////////////////////STORAGE ENGINE////////////////////////////////////////
-let gfs;
-
-conn.once('open',()=>{
-    gfs = grid(conn.db,mongoose.mongo)
-    gfs.collection('media')
+app.get('/subject',async(req,res)=>{
+  res.render('subject')
 })
-
-
-//create storage engine
-const storage = new GridFsStorage({
-  url: mongouri,
-  file: (req, file) => {
-    return new Promise((resolve, reject) => {
-      crypto.randomBytes(16, (err, buf) => {
-        if (err) {
-          return reject(err);
-        }[]
-        const filename = buf.toString('hex') + path.extname(file.originalname);
-        const fileInfo = {
-          filename: filename,
-          bucketName: 'media'
-        };
-        resolve(fileInfo);
-      });
-    });
-  }
-});
-const upload = multer({ storage });
-////////////////////////////////////////////STORAGE ENGINE////////////////////////////////////////
 
 app.post('/updateprofile',upload.single('file'),async(req,res,next)=>{
   const currentuserid =req.user._id
   const updateduser=await student.findOneAndUpdate(
     { _id: currentuserid },
     {username:req.body.username,
-      branch:req.body.username,
+      branch:req.body.branch,
       joinyear:req.body.year,
-      profilepic:req.file.id
+      profilepic:req.file.filename
      },
     {
       new: true,
     }
   );
   console.log(updateduser);
+  res.redirect('/secret')
+  
 })
 
-app.get('/image/:fileid',async(req,res,next)=>{
-    
-  gfs.files.findOne({id:req.params.fileid},(err,file)=>{
-      if(!file || file.length === 0)
-      {
-          res.status(404).json({
-              err:"file does't exist"
-          })
-      }
-      else if(file.contentType === 'image/jpg' || file.contentType === 'image/png')
-      {
-          const readstream = gfs.createReadStream(file.filename);
-          readstream.pipe(res)
-      }
-      else{
-          res.status(404).json({
-              err:"not an image"
-          })
-      }
-  })
-})
+
 
 
 
@@ -152,9 +94,6 @@ app.get("/secret", validUser, (req, res) => {
   res.render("dashboard");
 });
 
-app.get("/subjects", (req, res) => {
-  res.render("subject");
-});
 
 function validUser(req, res, next) {
   if (req.isAuthenticated()) {

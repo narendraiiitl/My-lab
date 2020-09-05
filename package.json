@@ -1,5 +1,5 @@
 {
-  "name": "my-lab",
+  "name": "eslate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,17 +8,43 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/narendraiiitl/My-lab.git"
+    "url": "git+https://github.com/narendraiiitl/ESlate.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/narendraiiitl/My-lab/issues"
+    "url": "https://github.com/narendraiiitl/ESlate/issues"
   },
-  "homepage": "https://github.com/narendraiiitl/My-lab#readme",
+  "homepage": "https://github.com/narendraiiitl/ESlate#readme",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.3"
+    "express-session": "^1.17.1",
+    "gridfs-stream": "^1.1.1",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "less-loader": "^7.0.0",
+    "lesshat": "^4.1.0",
+    "mongoose": "^5.10.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.2.0",
+    "nodemailer": "^6.4.11",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "redis": "^3.0.2",
+    "webpack": "^4.44.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-plugin-react": "^7.20.6"
   }
 }

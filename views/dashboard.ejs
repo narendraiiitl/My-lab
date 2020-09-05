@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/calender.css">
+</head>
+<body>
+    <div class="-wrapper">
+        <div class="-one ">
+            <div class="-one1 ">
+                <div class="-text -texth1">  MY Lab.</div>
+            </div>
+            <div class="-one2">
+                <div class="-one2wrapper">
+                    <div class="-one21 -text -texth2">Courses</div>
+                    <div class="-one22">
+                        <div class="-one221"><img src="assets/images/avatar/male.jpg"></div>
+                        <div id="username1" class="-one222 -text -texth2">Hack Sparrow</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="-two">
+            <div class="-two1">
+                <div class="ui massive inverted vertical menu fluid">
+                    <a class="active item" id="username2">
+                         <i class="user circle icon -iconleft"></i>Hack Sparrow
+                    </a>
+                    <a class="item" id="crs">
+                        <i class="file alternate icon -iconleft"></i>Cources
+                    </a>
+                    <a class="item" id="cldr">
+                        <i class="calendar alternate icon -iconleft"></i>Calender
+                    </a>
+                    <a class="item" id="grades">
+                        <i class="clipboard check icon -iconleft"></i>Grades
+                    </a>
+                    <a class="item" id="noti">
+                        <i class="bell icon -iconleft"></i> Notifications
+                    </a>
+                    <a class="item" id="cr">
+                        <i class="video icon -iconleft"></i> Classroom
+                    </a>
+                    <a class="item" id="fs">
+                        <i class="rupee sign icon -iconleft"></i>Fees Status
+                    </a>
+                    <a class="item" id="attendance">
+                        <i class="calendar plus icon -iconleft"></i> Attendance
+                    </a>
+                    <a class="item" id="signout">
+                        <i class="arrow circle left icon -iconleft"></i>Sign Out
+                    </a>
+                  </div>
+            </div>
+            <div class="-two2">
+                <div class="-two21" id="--subjects" style="display:none !important">
+                </div>
+                <div class="-two22" id="-attendance" style="display:none !important">
+                    <table class="ui large  selectable inverted table">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+                            <th>Subject</th>
+                            <th>Attendence</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                          <tr>
+                            <td>2-03-2019</td>
+                            <td>System Management</td>
+                            <td>Present</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="-two22new" id="-grades" style="display:none !important">
+                    <table class="ui large  selectable inverted table">
+                        <thead>
+                          <tr>
+                            <th>Teacher</th>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Sushil Tiwari</td>
+                            <td>System Management</td>
+                            <td>95</td>
+                          </tr>
+                          <tr>
+                            <td>Somendu Chakrawati</td>
+                            <td>TOC</td>
+                            <td>90</td>
+                          </tr>
+                          <tr>
+                            <td>Indu Mishra</td>
+                            <td>Calculus</td>
+                            <td>92</td>
+                          </tr>
+                          <tr>
+                            <td>Sushil Tiwari</td>
+                            <td>R Programming</td>
+                            <td>12</td>
+                          </tr>
+                          <tr>
+                            <td>Dhananjay Dey</td>
+                            <td>Discreate Math</td>
+                            <td>33</td>
+                          </tr>
+                        
+                          
+                         
+                        </tbody>
+                    </table>
+                </div>
+                <div class="-two22new" id="-fees" style="display:none !important">
+                    <table class="ui large  selectable inverted table">
+                        <thead>
+                          <tr>
+                            <th>Semester</th>
+                            <th>Fee</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>First</td>
+                            <td>College</td>
+                            <td>paid</td>
+                          </tr>
+                          <tr>
+                            <td>First</td>
+                            <td>Hostel</td>
+                            <td>paid</td>
+                          </tr>
+                          <tr>
+                            <td>Second</td>
+                            <td>College</td>
+                            <td>Paid</td>
+                          </tr>
+                          <tr>
+                            <td>Second</td>
+                            <td>Hostel</td>
+                            <td>paid</td>
+                          </tr>
+                          <tr>
+                            <td>Third</td>
+                            <td>College</td>
+                            <td>Pending</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="-two23new" id="-profile" style="display:non !important">
+                  <div class="ui inverted segment">
+                    <div class="ui inverted form">
+                  <form class="ui form " action="/updateprofile" method="POST"  enctype="multipart/form-data">
+                    <div class="field">
+                      <label>Username</label>
+                      <input type="text" name="username" placeholder="Name">
+                    </div>
+                    <div class="field">
+                      <label>Roll No.</label>
+                      <input type="text" name="rollno" placeholder="Roll number">
+                    </div>
+                    <div class="fields">
+                    <div class="field">
+                      <label>Branch</label>
+                      <input type="text" name="branch" placeholder="Branch">
+                    </div>
+                    <div class="field">
+                      <label>Joining Year</label>
+                      <input type="text" name="year" placeholder="Joining year">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="-dfile">Profile Pic</label>
+                    <input id="-dfile" type="file" name="file">
+                  </div>
+                    <button class="ui button" type="submit">Submit</button>
+                  </form>
+                  </div>
+                  </div>
+                </div>
+                <section class="-calendar" id="-calendar" style="display: none !important;">
+                    <div class="-event1">
+                        <div id="calendar" class="-box">
+                            <div id="calendar_header"><i class="icon-chevron-left"></i>          <h1></h1><i class="icon-chevron-right"></i>         </div>
+                            <div id="calendar_weekdays"></div>
+                            <div id="calendar_content"></div>
+                          </div> 
+                    </div>
+                    <div class="-event2">
+                        <div class="ui cards">
+                            <div class="card ">
+                              <div class="content">
+                                <div class="header">Assignment </div>
+                                <div class="description">
+                                  Tomorrow is the last date to submit System Management Assignment.
+                                </div>
+                              </div>
+                              <div class="ui bottom attached button">
+                                <i class="minus icon"></i>
+                                Dismiss
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="content">
+                                <div class="header">Workshop Alert!</div>
+                                <div class="description">
+                                     web Development workshop today at 5:00PM.
+                                </div>
+                              </div>
+                              <div class="ui bottom attached button">
+                                <i class="minus icon"></i>
+                                Dismiss
+                              </div>
+                            </div>
+                            <div class="card ">
+                              <div class="content">
+                                <div class="header">Extra Class!</div>
+                                <div class="description">
+                                 Extra calss of Calculus by Indu Mam today at 3:00PM.
+                                </div>
+                              </div>
+                              <div class="ui bottom attached button">
+                                <i class="minus icon"></i>
+                                Dismiss
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                   
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/calender.js"></script>
+    <script src="js/dashuserinfo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <srcipt src="js/discordmenucontrol.js"></srcipt>
+</body>
+</html>

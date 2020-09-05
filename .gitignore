@@ -1,1 +1,5 @@
 node_modules
+.env
+rest.http
+.eslintrc.json
+config

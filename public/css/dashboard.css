@@ -1,0 +1,173 @@
+.-iconleft{
+    float:left !important; 
+    margin-right:1rem !important;
+}
+.-one{
+   width:100%; 
+   height:15vh;
+   display: flex;
+   flex-direction: row;
+}
+.-one1{
+    width:20%;
+    min-width:250px;
+    height:15vh;
+    background:rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.-text{
+    color:white;
+    font-family: 'Montserrat';
+}
+.-texth1{
+    font-size:2.8rem;
+    text-align: center;
+    font-weight: 600;
+}
+.-texth2{
+    font-size:2rem;
+    text-align: center;
+    font-weight: 500;
+}
+.-one2{
+    width:80%;
+    height:15vh;
+    background:rgb(22, 22, 22);
+}
+.-one2wrapper{
+    padding:0 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15vh;
+    justify-content: space-between;
+}
+.-one22{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.-one221{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.-one221 img{
+    width:2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.-two{
+   width:100%; 
+   display: flex;
+   flex-direction: row;
+   height:85vh;
+}
+.-two1{
+    width:20%;
+    min-width:250px;
+    background:rgb(44, 44, 44);
+    height:85vh;
+    padding:.5rem;
+}
+.-two2{
+    width:80%;
+    background:rgb(36, 36, 36);
+    height:85vh; 
+}
+.-card{
+    background:rgb(29, 29, 29) !important;
+  
+}
+.-border{
+    border: 2px solid rgb(26, 26, 26) !important;
+    box-shadow: 0 0 4px 0 rgba(54, 54, 54, 0.13) !important;
+}
+.-white{
+color: white !important;
+}
+.-whitetop{
+border-top:1.5px solid rgb(131, 131, 131) !important;
+}
+.-two21{
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start;
+}
+.-margin{
+    margin-bottom: 0rem !important;
+}
+.-twocard{
+    width:250px;
+    height: 200px;
+    border-radius: 3px;
+    border: 1.5px solid rgb(26, 26, 26) !important;    
+    background:rgb(29, 29, 29) !important;
+    color: white !important;
+    box-shadow: 0 0 6px 0 rgba(24, 24, 24, 0.247);
+    margin-top: .5rem ;
+    margin-bottom:1.5rem ;
+    margin-left: 1rem ;
+    margin-right:0 ;
+}
+.-twocard1{
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+    border-bottom: 1.5px solid rgb(56, 56, 56) !important;
+}
+.-twocard2{
+    padding: 1rem;
+    font-size:.9rem ;
+    font-weight: 500;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+    text-transform: uppercase;
+}
+.-twocard3{
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.-twocard4{
+    padding: 0 1rem;
+    padding-bottom:1rem !important;
+}
+.-two2{
+    overflow-y: scroll !important;
+    display: flex;
+    flex-direction: row;
+}
+.-two22{
+    padding:.5rem;
+    width: 60%;
+}
+.-two22new{
+    padding:.5rem;
+    width: 60%;
+}
+.-calender{
+   display: flex;
+   flex-direction: row;
+   padding-top:0.5rem ;
+   padding-left:0.5rem ;
+   justify-content: flex-start;
+}
+.-event2{
+    padding-left: 2rem ;
+    padding-top:.1rem ;
+}
+.-box{
+    -webkit-box-sizing: unset !important;
+    box-sizing: unset !important;
+}
+.-two23new{
+    margin:2rem auto;
+    width: 60%;
+}

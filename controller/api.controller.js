@@ -17,12 +17,25 @@ module.exports = {
       else {
         const Subject = new subject({
           name: req.body.name,
-          joinYear: req.body.joinYear,
+          joinyear: req.body.joinyear,
           branch: req.body.branch,
           teacher: req.body.teacher,
         });
         await Subject.save().then(async (newsubject) => {
           console.log("new subject created" + newsubject);
+          const sub = {
+            name:req.body.name,
+            marks: '33',
+            teacher:req.body.teacher
+          }
+          student.update({joinyear:req.body.joinyear, branch:req.body.branch},{ $push: { subjects:sub } },{multi:true},function (err, docs) { 
+            if (err){ 
+                console.log(err) 
+            } 
+            else{   
+                console.log("Updated Docs : ", docs); 
+            } 
+        })
         });
         res.send("Subject posted successfully");
       }
@@ -74,6 +87,7 @@ module.exports = {
   },
   postmark: async (req, res, next) => {
     try {
+      console.log("mark attednece")
       const userid = req.body.id.split('"')[1];
       const currentsubject = req.body.subject;
       const attendence = {

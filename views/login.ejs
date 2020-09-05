@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eslate</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="/css/loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+  <div class="lwrapper">
+    <div class="lback">
+      <a href="/"> 
+       <div class="lbackbox">
+         <i class="fas fa-arrow-left"></i>
+       </div>
+     </a>
+     </div>
+    <div class="lcover">
+      <div class="lbox1">
+        <div class="lname">
+          My Lab.
+        </div>
+        <div class="limage">
+          <img  src="/assets/svg/into.svg">
+          <div class="ltagline">Login to get full user experience</div>
+        </div>
+      </div>
+      <div class="lbox2">
+        <div class="lgreeting">
+          <div id="lp1">Hello!</div>
+          <div id="lp2">Good Morning</div>
+        </div>
+        <div class="llogin">
+          <div class="llog1">
+            <p><span>Login</span> your account </p>
+          </div>
+         <a href="/auth/google"> <div class="llog2">
+            <div class="lgbox1">
+              <div class="lgbox2">
+                <img src="/assets/svg/google-icon.svg">
+              </div>
+              <div class="lgtext">Login with Google</div>
+            </div>
+          </div></a>
+          <div class="lor">
+            <span>or</span>
+          </div>
+          <form class="lform" action="/auth/login" method="POST">
+            <div class="lemail">
+              <div class="llabel">Email</div>
+              <input class="lflat" type="email" name="email" >
+            </div>
+            <div class="lpassword">
+              <div class="llabel">Password</div>
+              <input class="lflat" type="password" name="password" >
+              <div class="lforgot"><a href="#">forgot password?</a></div>
+            </div>
+            <button class="lbutton">Login</button>
+            <div class="lcreate">
+             <a href="/auth/register">Create Account</a> 
+            </div>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
