@@ -116,7 +116,7 @@ app.use((err, req, res) => {
   });
 });
 
-app.listen(port, (err) => {
+app.listen(process.env.PORT||port, (err) => {
   if (err) {
     console.log("server error");
   } else console.log(`server running on port ${port}`);

@@ -3,7 +3,7 @@ const googlestrategy = require("passport-google-oauth20");
 const localstrategy = require("passport-local");
 const Student = require("../models/student");
 const bcrypt = require("bcrypt");
-const { clientID, clientSecret } = require("../config/keys");
+// const { clientID, clientSecret } = require("../config/keys");
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
@@ -21,8 +21,8 @@ passport.use(
     {
       //option for google strategy
       callbackURL: "/auth/google/redirect",
-      clientID: clientID,
-      clientSecret: clientSecret,
+      clientID: process.env.clientID,
+      clientSecret: process.env.clientSecret,
     },
     (accessToken, refreshToken, profile, done) => {
       Student.findOne({ googleid: profile.id }).then((currentStudent) => {
