@@ -54,6 +54,7 @@ imgRouter.get('/:filename',async(req,res,next)=>{
         }
         else if(file.contentType === 'image/jpg' || file.contentType === 'image/png' || file.contentType === 'image/jpeg')
         {
+            console.log("1")
             const readstream = gfs.createReadStream(file.filename);
             readstream.pipe(res)
         }
