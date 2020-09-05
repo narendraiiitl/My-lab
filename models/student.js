@@ -33,6 +33,9 @@ const studentSchema = new Schema({
         type:String,
     } ,
     subjects:[{
+        subid:{
+            type:String,
+        },
         name:{
             type:String,
         },

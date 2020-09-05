@@ -24,6 +24,7 @@ module.exports = {
         await Subject.save().then(async (newsubject) => {
           console.log("new subject created" + newsubject);
           const sub = {
+            subid:newsubject._id,
             name:req.body.name,
             marks: '33',
             teacher:req.body.teacher
@@ -59,6 +60,8 @@ module.exports = {
   },
   getusername: async (req, res, next) => {
     try {
+      console.log("useranme");
+      console.log(req.headers.user_id.split('"')[1])
       const user = req.headers.user_id.split('"')[1];
       const Stu = await student.findOne({ _id: user });
       res.send(Stu);
@@ -79,8 +82,20 @@ module.exports = {
   },
   getcurrentsubject: async (req, res, next) => {
     try {
-      const Subject = await subject.findOne({ _id: req.headers.subject_id });
-      res.send(Subject);
+      console.log(req.headers.subject_id)
+      console.log(req.headers)
+       await subject.findOne({ _id: req.headers.subject_id })
+      .then((sub)=>{
+        console.log(req.headers)
+        console.log(sub);
+        console.log(req.headers)
+        res.send(sub);
+      })
+      .catch((err)=>{
+        console.log(err);
+        res.send("err");
+      })
+     
     } catch (error) {
       next(error);
     }

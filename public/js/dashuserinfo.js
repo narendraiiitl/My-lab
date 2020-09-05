@@ -185,7 +185,7 @@ $.getJSON("http://localhost:3000/api/currentUser",(user)=>{
     <div class="-twocard1">${element.name}</div>
     <div class="-twocard2">detials</div>
     <div class="-twocard3">${element.teacher}</div>
-    <div class="-twocard4"><a href="http://localhost:4000/${element._id}"><button class="ui button">Join Class</button></div><a>
+    <div class="-twocard4"><a href="http://localhost:4000/${element.subid}"><button class="ui button">Join Class</button></div><a>
 </div>`
   });
 })
